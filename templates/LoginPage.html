@@ -1,0 +1,74 @@
+<!doctype html>
+{%extends "index.html" %}
+<html>
+<head>
+<title>login</title>
+{% block content %}
+
+</head>
+
+<body>
+
+<div class='LoginBackground'>
+	<!-------------------  로그인 화면 ---------------->
+	<div class='LoginBigBox' id='LoginPage' >
+
+		<form name='LoginForm' method='post' id="LoginForm" action='/login'>
+			
+			<h2 class="LoginHeadText">로 &nbsp;&nbsp;그 &nbsp;&nbsp;인 </h2>
+			  <!-- 아이디 입력 -->
+			<div class="LoginInputOutBox">
+			<input class="LoginInput" id="idButton" type='text'  autocomplete="off"
+				name='idButton' size='20' placeholder='아이디' required ='' >
+			<br></div>
+			
+		   <!-- 비밀번호 입력 -->
+			<div class="LoginInputOutBox">
+			<input class="LoginInput" id="pwButton" type='password' 
+				name='pwButton' size='20' placeholder='비밀번호' required =''>
+				<br></div>
+				<!-- 로그인/회원가입 버튼 -->
+			<button type='submit' class='LoginSubmitButton'> 
+			로&nbsp;&nbsp;&nbsp;&nbsp;그&nbsp;&nbsp;&nbsp;&nbsp;인 </button>
+		</form>
+		
+		
+		
+		<a href="/signuppage">
+		<button type='button' class='LoginOthers' 
+		id="SignUpButton" >
+		회원 가입 
+		</button></a>
+		
+		<button type='button' class='LoginOthers' 
+		id="FindPwButton"> 비밀번호 찾기 </button>
+	</div>
+	
+	<!---------------  회원가입  화면 --------------->
+	
+	
+	<!-------------비밀번호 찾기 선택 화면------------>
+	<div class='LoginBigBox' id='FindPwSelectPage' style='display: none'>
+	    <h2 class="LoginHeadText">비밀번호 찾기 </h2>
+		<a href='/findpw_nm'>
+		<button type='button' class='LoginSubmitButton' id="PwFindByName"> 이름으로 찾기 </button>
+		</a>
+		<a href='/findpw_em'>
+		<button type='button' class='LoginSubmitButton' id="PwFindByEmail"> 이메일로 찾기 </button>
+		</a>
+	
+	</div>
+	
+</div>
+
+
+
+<script>
+
+
+</script>
+
+
+{% endblock %}
+</body>
+</html>

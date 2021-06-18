@@ -1,0 +1,69 @@
+<!doctype html>
+{%extends "index.html" %}
+<html>
+<head>
+<title>login</title>
+{% block content %}
+
+</head>
+
+<body>
+
+<div class='LoginBackground'>
+
+<!---------------  회원가입  화면 --------------->
+	<div class='LoginBigBox' id='SignUpPage' >
+
+
+		<form name='SignUpForm' method='post' id="SignUpForm" action='/signup'>
+			
+			<h2 class="LoginHeadText">회&nbsp;&nbsp;원&nbsp;&nbsp;가&nbsp;&nbsp;입 </h2>
+			  <!-- 아이디 입력 -->
+			<div class="LoginInputOutBox">
+			<input class="LoginInput" id="idSignUpButton" type='text'  autocomplete="off"
+				name='idSignUpButton' size='20' placeholder='아이디' required ='' >
+			</div>
+			
+		   <!-- 이름 입력 -->
+			<div class="LoginInputOutBox">
+			<input class="LoginInput" id="namdSignUpButton" type='text' autocomplete="off"
+				name='namdSignUpButton' size='20' placeholder='이름' required =''>
+				</div>
+				
+			<!-- 비밀번호 입력 -->
+			<div class="LoginInputOutBox">
+			<input class="LoginInput" id="pwSignUpButton" type='password'  onkeyup="PasswordComfirm()"
+				name='pwSignUpButton' size='20' placeholder='비밀번호' required =''>
+				</div>
+				
+			<!-- 비밀번호 다시 입력 -->
+			<div class="LoginInputOutBox">
+			<input class="LoginInput" id="pwRepeatSignUpButton" type='password' onkeyup="PasswordComfirm()"
+				name='pwRepeatSignUpButton' size='20' placeholder='비밀번호 확인' required ='' >
+				</div>
+				<span id="pw_confirm_result" style='text-align:left'></span>
+			<!-- 이메일 입력 -->
+			<div class="LoginInputOutBox">
+			<input class="LoginInput" id="EmailSignUpButton" type='text' autocomplete="off"
+				name='EmailSignUpButton' size='20' placeholder='이메일' required =''>
+				</div>
+				
+			<!-- 로그인/회원가입 버튼 -->
+			<button type='submit' class='LoginSubmitButton'> 
+			회&nbsp;&nbsp;&nbsp;원&nbsp;&nbsp;&nbsp;가&nbsp;&nbsp;&nbsp;입 </button>
+		
+		</form>
+		
+		<a href='/LoginPage'>
+		<button type='button' class='LoginOthers' 
+		id="Back2LoginPage"> 
+		로그인 하러가기
+		</button></a> 
+	</div>
+
+</div>
+
+
+{% endblock %}
+</body>
+</html>

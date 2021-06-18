@@ -1,0 +1,192 @@
+<!doctype html>
+{%extends "index.html" %}
+<html>
+<head>
+<title>Designer Introduce</title>
+{% block content %}
+
+</head>
+
+
+<body>
+
+<div class='LoginBackground'>
+    <!--    이달의 디자이너 헤드라인    -->
+	<div class='AllDesignerIntroducePage' >
+	<div class='DesignerHeadBox'>
+	    <div class='IntroHeadCenterLine'>
+			<div id='LeftTop'></div>
+			<div id='LeftBottom'></div>
+		</div>
+		<div class='IntroHeadCenterLine'  id='DesignerHeadText'>
+			<h2>이달의 디자이너</h2>
+		</div>
+		<div class='IntroHeadCenterLine' id='HeadRight'>
+			<div id='RightTop'></div>
+			<div id='RightBottom'></div>
+		</div>
+	</div>
+
+	<!--- 개별 디자이너 프로필 하나 --->
+	<div class='MonthDesignerBox' >
+		<div class='DesignerProfileBox'>
+			<!--<div class='ProfileImgOver'>-->
+			<img class='DesignerImg' src = "{{ url_for('static', filename='dahyun.jpg') }}" >
+			
+			<h4 class='DesignerNameText'>김 다 현</h4>
+			
+			<div class='DesignerInfoBox'>
+				<div class='DesignerInfoText'>시각디자인</div>
+				<div class='DesignerInfoText'> ★ 4.2</div>
+				<div class='DesignerInfoText'> 후기 +14</div>
+			</div>
+			
+			<div class='DesignerInfoBox'>
+				<div class='DesignerSpecialHash'> #UI</div>
+				<div class='DesignerSpecialHash'> #포스터</div>
+				<div class='DesignerSpecialHash'> #PPT</div>
+			</div>
+			
+		</div>
+		
+		<div class='DesignerProfileBox'>
+			<!--<div class='ProfileImgOver'>-->
+			<img class='DesignerImg' src = "{{ url_for('static', filename='chaew.jpg') }}" >
+			
+			<h4 class='DesignerNameText'>차 은 우</h4>
+			
+			<div class='DesignerInfoBox'>
+				<div class='DesignerInfoText'>산업디자인</div>
+				<div class='DesignerInfoText'> ★ 4.4</div>
+				<div class='DesignerInfoText'> 후기 +17</div>
+			</div>
+			
+			<div class='DesignerInfoBox'>
+				<div class='DesignerSpecialHash' id='ooooooo'> #웹</div>
+				<div class='DesignerSpecialHash'> #케드</div>
+				<div class='DesignerSpecialHash'> #PPT</div>
+			</div>
+			
+		</div>
+	
+		<div class='DesignerProfileBox'>
+			<!--<div class='ProfileImgOver'>-->
+			<img class='DesignerImg' src = "{{ url_for('static', filename='taeli.jpg') }}" >
+			
+			<h4 class='DesignerNameText'>김 태 리</h4>
+			
+			<div class='DesignerInfoBox'>
+				<div class='DesignerInfoText'>공예디자인</div>
+				<div class='DesignerInfoText'> ★ 4.1</div>
+				<div class='DesignerInfoText'> 후기 +8</div>
+			</div>
+			
+			<div class='DesignerInfoBox'>
+				<div class='DesignerSpecialHash'> #유리</div>
+				<div class='DesignerSpecialHash'> #회화</div>
+				<div class='DesignerSpecialHash'> #금속</div>
+			</div>
+			
+		</div>
+	
+	</div>
+	</div>
+	
+	<!---디자이너 목록 -->
+	<div>
+	
+	<div class='DesignerProfileBox'>
+		<!--<div class='ProfileImgOver'>-->
+		<img class='DesignerImg' src = "{{ url_for('static', filename='dahyun.jpg') }}" >
+		
+		<h4 class='DesignerNameText'>차 은 우</h4>
+		
+		<div class='DesignerInfoBox'>
+			<div class='DesignerInfoText'>산업디자인</div>
+			<div class='DesignerInfoText'> ★ 4.4</div>
+			<div class='DesignerInfoText'> 후기 +17</div>
+		</div>
+		
+		<div class='DesignerInfoBox'>
+			<div class='DesignerSpecialHash' id='ooooooo'> #웹</div>
+			<div class='DesignerSpecialHash'> #케드</div>
+			<div class='DesignerSpecialHash'> #PPT</div>
+		</div>
+		
+	</div>
+	
+	
+	
+	
+	
+	</div>
+	
+	
+	<div class='OneDesignerIntroducePage' style='display: none'>
+		<div class='DesignerProfileInfoBox'>
+			<div class='ProfileImgBox'>
+				<img class='DesignerProfileImg' src = "{{ url_for('static', filename='chaew.jpg') }}" >
+			</div>
+			
+			<div class='DesignerProfileHeadBox'>
+				<div class='ProfileHeader'>
+					<h2 class='DesignerProfileName'>차 은 우</h2>
+					<div class='ChatOrMyPageBox'>
+						<button class='SearchFilterButton' type='button' name='ChattingStartButton' id='ChattingStartButton'>
+						채팅 걸기 
+						</button>
+					</div>
+				</div>
+				<div class='ProfileSchool'>
+					<div class='SchoolName'>청주대</div>
+					<div class='SchoolSlice'> / </div>
+					<div class='SchoolMajor'>산업 디자인</div><br>
+				</div>
+				<div class='DesignerProfileStar'> 
+					<span>★ 4.4<span>
+				</div>
+			</div>
+		</div>
+		<div class='ProfileMyIntroBox'>
+			<h3 class='MyIntroHeadText'>자 기 소 개</h3>
+				<span class='Quotation'>"<span>
+				<p class='MyIntroSaying'>
+					나는 세상에서 제일 잘생긴 차은우
+				</p>
+				<span class='Quotation'>"<span>
+		</div>
+		<div class='DealHistoryBox'>
+			<h3 class='MyIntroHeadText' id='DealHistoryHead'>거래 내역</h3>
+			<table class='DealHistoryTable'>
+				<tr>
+					<td width='8%'>1</td>
+					<td width='75%'>히드라군 아이디 팝니다</td>
+					<td width='17%'>★ 3.4</td>
+				</tr>
+			</table>
+			<div class='DealHistoryButtonBox'>
+				<button type='button' class=''> 이전 </button>
+				<button type='button' class=''> 다음 </button>
+			</div>
+		</div>
+		
+		<div class='PortfolioBox'>
+			<h3 class='MyIntroHeadText' id='PortFolioHeadTxt'>포트폴리오</h3>
+			<div class='PortFolioImgBox'>
+				<img class='PortfolioImgOne' src = "{{ url_for('static', filename='130.jpg') }}" >
+				<img class='PortfolioImgOne' src = "{{ url_for('static', filename='143.jpg') }}" >
+				<img class='PortfolioImgOne' src = "{{ url_for('static', filename='177.jpg') }}" >
+			</div>
+		</div>
+		
+		<button type='button' class='BackDesignerButton'> 뒤로 </button>
+	
+	</div>
+		
+
+</div>
+
+
+{% endblock %}
+</body>
+</html>

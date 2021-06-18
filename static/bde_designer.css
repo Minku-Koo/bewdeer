@@ -1,0 +1,932 @@
+/* 디자이너 소개, 소개화면 관련 CSS  */
+/* bde_designer.css  */
+
+/* 이달의 디자이너 헤드 전체 div 박스  */
+.DesignerHeadBox{
+	margin: 0 auto;
+	position: relative;
+	width: 60%;
+	height: 100px;
+	min-width: 1200px;
+	//border: solid 1px red;
+}
+
+/*  이달의 디자이너 제목 텍스트 */
+#DesignerHeadText{
+	font-size: 26px;
+	text-align: center;
+	vertical-align:top;
+	width: 32%;
+	font-family: 'NanumBarunGothic', sans-serif;
+}
+
+/*  이달의 디자이너 중앙 선 설정을 위한 div 3개 분할   */
+.IntroHeadCenterLine{
+	width: 33%;
+	height: 99%;
+	font-size: 20px;
+	//text-align: center;
+	display: inline-block;
+	//border: solid 1px black;
+	//margin: 5px;
+}
+#HeadRight{
+	float: right;
+	min-width: 360px;
+}
+
+#LeftTop, #RightTop{
+	border-bottom: solid 2px red;
+	height: 60%;
+}
+#LeftBottom, #RightBottom{
+	border-top: solid 3px orange;
+	height: 40%;
+}
+/*************  여기까지 이달의 디자이너 헤더   ***************/
+/*****************************************************/
+/****************  디자이너 개개인 프로필 박스들  ********************/
+/* 이달의 디자이너 3명 박스 */
+.MonthDesignerBox{
+	width: 60%;
+	margin: 0 auto;
+	height: 270px;
+	//border: solid 2px red;
+	padding: 0 180px;
+	padding-bottom: 20px;
+	border-bottom: solid 2px red;
+}
+/*디자이너 개인 프로필 큰 div 박스*/
+.DesignerProfileBox{
+	//border: solid 2px blue;
+	width: 32%;
+	height: 95%;
+	display: inline-block;
+}
+/* 디자이너 프로필 이미지 **/
+.DesignerImg{
+	//position: relative;
+	margin: 5px 25%;
+	width: 50%;
+	height: 140px;
+	//background-size: cover;
+    border-radius: 40%;
+}
+/*프로필 이름 */
+.DesignerNameText{
+	text-align: center;
+	font-size: 25px;
+	margin: 0;
+}
+/* 디자이너 정보, 주특기  div 박스 */
+.DesignerInfoBox{
+	margin: 5px auto;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+/*디자이너 정보 소개 */
+.DesignerInfoText{
+	text-align: center;
+	display: inline-block;
+	margin: 0 10px;
+	font-size: 16px;
+}
+/* 디자이너 주특기 해쉬태그 */
+.DesignerSpecialHash{
+	display: inline-block;
+	//margin: 8px 5%;
+	text-align: center;
+	font-size: 14px;
+	padding: 2px 4px;;
+	border: solid 1px #E8C5C5;
+	background-color: #F7C2C2;
+	opacity: 0.8;
+	border-radius: 10%;
+}
+/*****************************************************/
+/****************  게시판  화면  ********************/
+
+/* 검색바 = #eb7f83  N = #ff0000      */
+/* No 제목 글쓴이 등 글씨들 위에 있는 경계선 = #eb7f83   */
+ /*게시글 사이 경계선 = #f2d2d3*/
+ 
+ 
+/*게시판 큰 박스*/
+.BoardInside{
+	//border: solid 2px green;
+	margin: 25px auto;
+	//position: relative;
+	width: 85%;
+	height: 650px;
+	min-width: 1111px;
+}/*메인 게시판 박스*/
+.MainBoardBox{
+	//border: solid 2px red;
+	width: 78%;
+	height: 650px;
+	display: inline-block;
+	text-align: center;
+	min-width: 788px;
+}/*디자이너를 기다려요 게시판 박스*/
+.WannaDesignerBox{
+	border: solid 2px blue;
+	width: 20%;
+	height: 300px;
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	vertical-align:top;
+	min-width: 230px;
+	margin-left: 13px;
+}
+/*검색창 큰 박스 */
+.SearchInputBox{
+	//border: solid 2px orange;
+	width: 85%;
+	height: 60px;
+	margin: 0 auto;
+	text-align: left;
+	min-width: 843px;
+	
+}/*검색 대상 펼치기 버튼*/
+.SearchByWhatButton{
+	//background: #F8E0F7;
+	//opacity: 0.7;
+	width: 100px;
+	height: 45px;
+	margin: 10px;
+	margin-right: 2px;
+	font-size: 14px;
+	color: ##A901DB;
+	font-weight: 750;
+	border: solid 2px #eb7f83;
+	display: inline-block;
+	vertical-align: top;
+}
+.InputBox{
+	width: 75%;
+	height: 41px;
+	//opacity: 0.9;
+	//background: #FDDCDC;
+	margin: 7px;
+	font-size: 16px;
+	padding: 0;
+	margin-top: 10px;
+	margin-right: 0;
+	//padding-left: 10px;
+	border: solid 0px #eb7f83;
+	display: inline-block;
+	//vertical-align: middle;
+	//padding-top:0;
+}
+/*검색 창*/
+#InputTextBox{
+	width: 88%;
+	height: 40px;
+	//opacity: 0.9;
+	//background: #FDDCDC;
+	//margin: 7px;
+	font-size: 16px;
+	//padding: 0;
+	margin: 0px;
+	//margin-top: 2px;
+	//padding-left: 10px;
+	border: solid 2px #eb7f83;
+	//border-radius: 3px;
+	display: inline-block;
+	vertical-align: top;
+	//outline:none;
+	float: left;
+}
+/*검색 버튼*/
+.Magnifying{
+	width: 5%;
+	height: 34px;
+	margin: 0px;
+	background: #eb7f83;
+	//border-top: solid 3px #eb7f83;
+	padding: 6px;
+	cursor:pointer;
+	display: inline-block;
+	//vertical-align: top;
+	//margin-bottom: 15px;
+	//float: right;
+	float: left;
+}
+
+
+
+.SearchFinButton{
+	background: #F8E0F7;
+	//opacity: 0.7;
+	position: absolute;
+	width: 70px;
+	height: 40px;
+	margin: 10px;
+	margin-left: 2px;
+	font-size: 14px;
+	color: ##A901DB;
+	//font-weight: 800;
+	border: solid 1px #8A0886;
+	border-radius: 2px;
+	cursor:pointer;
+}/*필터 버튼*/
+.SearchFilterButton{
+	background: #F4C667;
+	opacity: 0.8;
+	width: 70px;
+	height: 30px;
+	margin: 10px 10px;
+	//margin-left: 0px;
+	margin-right: 0px;
+	font-size: 14px;
+	color: #975A06;
+	//font-weight: 800;
+	border: solid 1px #DA620E;
+	border-radius: 2px;
+	cursor:pointer;
+	//float: right;
+	vertical-align: bottom;
+}
+/*필터 박스 */
+.FilterBox{
+	border: solid 2px blue;
+	width: 83%;
+	height: 80px;
+	margin: 15px auto;
+}
+/*필터 하단 박스 */
+.FilterBottomBox{
+	//border: solid 1px red;
+	width: 98%;
+	height: 50%;
+	margin: 3px auto;
+	display: inline-block;
+}
+/*가격 필터 인풋 박스 */
+.CostFilterBox{
+	//border: solid 1px green;
+	width: 35%;
+	height: 90%;
+	display: inline-block;
+	margin: 0 10px;
+}
+.CostFilterInput{
+	width: 30%;
+	height: 90%;
+	display: inline-block;
+}
+
+/*마감일 필터박스 */
+.DeadLineFilterBox{
+	//border: solid 1px green;
+	width: 28%;
+	height: 90%;
+	display: inline-block;
+	margin: 0 10px;
+}
+.DeadLineFilterInput{
+	width: 50%;
+	height: 90%;
+	display: inline-block;
+}
+/*마감 포함*/
+.DeadLineIncludeBox{
+	width: 12%;
+	height: 90%;
+	display: inline-block;
+	//margin: 0 10px;
+}
+
+/*게시판 해쉬태그 필터 박스 */
+.HashFilterBox{
+	//border: solid 2px pink;
+	width: 58%;
+	height: 25px;
+	margin-bottom: 7px;
+	margin-left: 19%;
+	//display: inline-block;
+}
+.HashOnlyBox{
+	margin-top: 5px;
+}
+.HashOnlyBox div{
+	cursor: pointer;
+}
+/*게시글 보여주는 박스*/
+.ShowPostBox{
+	border-top: solid 2px #eb7f83;
+	border-bottom: solid 2px #eb7f83;
+	width: 98%;
+	//height: 530px;
+	margin: 0 auto;
+}/*게시글 정렬 셀렉터 버튼*/
+.PostSortSelect{
+	background: #F4C667;
+	opacity: 0.8;
+	width: 90px;
+	height: 25px;
+	margin: 3px;
+	margin-right: 0;
+	font-size: 12px;
+	color: #975A06;
+	border: solid 1px #DA620E;
+	border-radius: 2px;
+	display: inline-block;
+	cursor:pointer;
+	//float: right;
+	//vertical-align: bottom;
+}/* 말풍선 ㅋㅋ*/
+.SpeechBubble{
+	width: 13px;
+	height: 15px;
+	display: inline-block;
+}/* 글 제목 div*/
+.TitleSource{
+	width: 42px;
+	margin-left: 5px;
+	display: inline-block;
+}
+.HowDatCount{
+	
+}/*새 댓글에 뉴 표시*/
+.NewDat{
+	color: red;
+	font-size: 14px;
+	font-weight: 770;
+	display: inline-block;
+	margin-right: 5px;
+	width: 12px;
+}
+
+.TableTitleText a{
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+}
+.ShowPostBox table{
+	//border-bottom: solid 1px #f2d2d3;
+	border-collapse: collapse;
+}
+/*테이블 헤더*/
+.BoardTableHeader{
+	border-bottom: solid 1.5px #E27481;
+	
+}
+.TableThText {
+	padding-bottom: 8px;
+	font-weight: 500;
+}
+
+/*테이블 바디 */
+.BoardTableOne td{
+	border-bottom: solid 1px #f2d2d3;
+	text-align: center;
+	font-weight: 400;
+}
+.TableMargin{
+	margin: 5px 0;
+}
+/* 각각 게시글 하나의 박스*/
+.EachPostBox{
+	border-bottom: solid 1px #f2d2d3;
+	width: 99%;
+	//height: 60px;
+	margin: 1px auto;
+}/*  게시글 정렬 셀렉터 div 박스 */
+.SelectorButtonBox{
+	//border: solid 2px blue;
+	width: 99%;
+	height: 35px;
+	margin: 0 auto;
+}/*게시글 번호 박스*/
+.PostNumberBox{
+	//border: solid 2px green;
+	width: 5%;
+	height: 98%;
+	display: inline-block;
+	vertical-align: top;
+	//text-align: center;
+}/*게시글 번호 span tag*/
+.PostNumber{
+	//vertical-align: middle;
+	//width: 90%;
+	line-height: 60px;
+	font-size: 20px;
+}/*게시글 본문 제목 박스*/
+.PostContent{
+	border-right: solid 1px #D8CEF6;
+	width: 76%;
+	height: 98%;
+	margin: 0 auto;
+	display: inline-block;
+}/*게시글 정보 박스*/
+.PostInfoBox{
+	//border: solid 1px purple;
+	width: 16%;
+	height: 100%;
+	//margin: 0 auto;
+	display: inline-block;
+	vertical-align: top;
+}/*  게시글 제목 박스 */
+.PostTitleBox{
+	float: right;
+	//border: solid 2px #08298A;
+	width: 97%;
+	height: 50%;
+	text-align: left;
+}/*게시글 정보 글쓴이 조회 날짜 span 태그*/
+.PostInfo{
+	vertical-align: middle;
+	font-size: 16px;
+	margin-top: 15px;
+}/*게시글 제목 옆에 업로드 날짜 */
+.PostWriter{
+	font-size: 15px;
+	float: right;
+	margin: 5px;
+	margin-right: 15px;
+}
+/* 게시글 제목 span 태그 */
+.PostTitle{
+	font-size: 20px;
+	//margin-top: 8px;
+	//height: 40%;
+	//border: solid 2px red;
+}/* 게시글 아랫 해쉬태그 박스 */
+.PostHashBox{
+	float: left;
+	//border: solid 1px #BEF781;
+	margin: 4px 17px;
+}/* 게시글 가격 기간 정보 박스 */
+.PostExtra{
+	float: right;
+	//border: solid 1px #FE2E9A;
+	margin: 4px 15px;
+} /* 글스기 버튼  */
+#WritingButton{
+	width: 80px;
+	float: right;
+	margin: 10px;
+	//vertical-align: top;
+	//display: inline-block;
+}
+/* 디자이너를 기다려요 박스 틀 */
+.WatingDesignerBox{
+	//border: solid 1px red;
+	width: 95%;
+	height: 15%;
+	margin: 0 auto;
+}
+.WatingDesignerHeadTxt{
+	margin: 0;
+	margin-top: 5px;
+}
+/*디자이너를 기다려요 제목 박스 */
+.WaitContentBox{
+	border: solid 1px blue;
+	width: 95%;
+	height: 8%;
+	margin: 2px auto;
+}/* 디자이너를 기다려요 하나의 제목  **/
+.WaitEachTitle{
+	float: left;
+	text-decoration: none;
+	color: black;
+	margin-left: 10px;
+}
+/*게시판 하단 박스*/
+.BoardBottomBox{
+	width: 98%;
+	height: 60px;
+	margin: 0 auto;
+	//border: solid 1px blue;
+	//display: inline-block;
+	
+}
+
+/*페이지 이동 박스*/
+.PageMoveBox{
+	//border: solid 1px red;
+	width: 50%;
+	height: 30px;
+	margin: 0 auto;
+	display: inline-block;
+	margin-top: 10px;
+}
+/**페이지 이동 번호 */
+.BoardPageNumber{
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+}
+/*이전 다음 버튼*/
+.PageMoveButton{
+	text-decoration: none;
+	color: black;
+}
+.PageMoveButton button{
+	background-color: white;
+	border: 0;
+	//border-radius: 2px;
+	opacity: 0.7;
+	cursor:pointer;
+	outline:none;
+}
+
+/******************************************************************/
+/****************** 디자이너 개인 프로필 페이지   *******************************/
+
+.DesignerProfileInfoBox{
+	margin: 0 auto;
+	margin-top: 25px;
+    position: relative;
+    width: 40%;
+    height: 350px;
+    //min-width: 1200px;
+	//border: solid 1px blue;
+	min-width: 255px;
+	
+}
+/* 채팅걸기 혹은 내정보 버튼 박스 */
+.ChatOrMyPageBox{
+	display: inline-block;
+	width: 40%;
+	height: 30px;
+	//border: solid 1px red;
+	vertical-align: bottom;
+	margin-left: 10px;
+}
+/* 개인 프로필 이미지 */
+.DesignerProfileImg{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	border-radius: 30%;
+	//display: inline-block;
+}
+.ProfileHeader{
+	width: 70%;
+	margin-left: 33%;
+}
+/*개인 프로필 페이지 이미지 사진*/
+.ProfileImgBox{
+	width: 50%;
+	height: 60%;
+	margin: 0 auto;
+	min-width: 255px;
+	//display: inline-block;
+	//border: solid 1px orange;
+}/*디자이너 개인정보 박스*/
+.DesignerProfileHeadBox{
+	margin: 0 auto;
+	//border: solid 1px red;
+	margin-top: 20px;
+	width: 50%;
+	min-width: 255px;
+}/*개인 프로필 이름 */
+.DesignerProfileName{
+	text-align: center;
+	font-size: 30px;
+	margin: 0;
+	display: inline-block;
+}
+/*채팅 시작 버튼 */
+#ChattingStartButton{
+	width: 85%;
+	margin: 3px;
+	height: 80%;
+	margin-left: 3px;
+	vertical-align: bottom;
+}
+
+
+/* 개인 별점*/
+.DesignerProfileStar{
+	text-align: center;
+	margin: 3px auto;
+	//margin-top: 3px;
+	font-size: 18px;
+}/* 학교 이름 */
+.SchoolName{
+	text-align: right;
+	font-size: 18px;
+	display: inline-block;
+	width: 40%;
+	margin-top: 5px;
+}/* 슬라이스  */
+.SchoolSlice{
+	width: 10%;
+	text-align: center;
+	font-size: 18px;
+	display: inline-block;
+	margin-top: 5px;
+}/* 학교 전공 */
+.SchoolMajor{
+	text-align: left;
+	font-size: 18px;
+	display: inline-block;
+	width: 40%;
+	margin-top: 5px;
+}
+/*자기소개 페이지*/
+.ProfileMyIntroBox{
+	width: 40%;
+	height: 80px;
+	//border: solid 1px orange;
+	margin: 0 auto;
+}/*자기소개 글씨 텍스트 */
+.MyIntroHeadText{
+	font-size: 22px;
+	font-weight: 750;
+	margin: 10px;
+	margin-bottom: 5px;
+}/*소개 본문*/
+.MyIntroSaying{
+	font-size: 16px;
+	margin: 0;
+	display: inline-block;
+}/* 자기소개 큰 따옴표*/
+.Quotation{
+	font-size: 16px;
+	font-weight: 700;
+	display: inline-block;
+}/*거래내역 박스*/
+.DealHistoryBox{
+	width: 40%;
+	height: 200px;
+	//border: solid 1px pink;
+	margin: 0 auto;
+	margin-top: 10px;
+}/*거래내역 테이블*/
+.DealHistoryTable{
+	width: 90%;
+	//height: 200px;
+	border: solid 1px blue;
+	margin: 0 auto;
+}
+#DealHistoryHead{
+	width: 90%;
+	margin: 10px auto;
+}
+/*거래내역 이전 다음 버튼 박스*/
+.DealHistoryButtonBox{
+	width: 20%;
+	margin: 10px auto;
+	text-align: center;
+	min-width: 94px;
+}
+/*포트폴리오 박스*/
+.PortfolioBox{
+	width: 50%;
+	height: 400px;
+	border: solid 1px black;
+	margin: 10px auto;
+}
+/*포트폴리오 제목 텍스트*/
+#PortFolioHeadTxt{
+	font-size: 30px;
+	width: 90%;
+	margin: 10px auto;
+}/*포트폴리오 이미지 집합 박스*/
+.PortFolioImgBox{
+	width: 90%;
+	border: solid 1px black;
+	margin: 5px auto;
+}/*포트폴리오 이미지 하나 클래스 */
+.PortfolioImgOne{
+	width: 10%;
+	height: 30%;
+	margin: 5px;
+}
+
+
+/***********************************/
+
+/*     글쓰기 페이지    */
+.WriteTextForm{
+	width: 50%;
+	height: 750px;
+	margin: 20px auto;
+	border: solid 1px #E31488;
+}
+/*
+.WritingBox{
+	width: 100%;
+	height: 100%;
+	margin: 20px auto;
+	border: solid 1px black;
+}
+/*제목 박스 */
+.WritingTitleBox{
+	width: 100%;
+	height: 8%;
+	margin: 0 auto;
+	//border: solid 1px red;
+}
+/* 제목 텍스트 */
+.TitleWritingTxt{
+	width: 10%;
+	height: 65%;
+	margin: 5px;
+	//border: solid 1px brown;
+	display: inline-block;
+	vertical-align: top;
+}
+
+/*제목 입력 인풋 박스 */
+#WriteTitleInput{
+	width: 80%;
+	height: 65%;
+	margin-top: 5px;
+	display: inline-block;
+	padding-left: 15px;
+	
+	opacity: 0.7;
+	background: #FDDCDC;
+	margin: 7px;
+	font-size: 17px;
+	border: solid 1px #E87E7E;
+	border-radius: 3px;
+}/*제목 글씨 */
+.TitleText_write{
+	font-size: 23px;
+	margin: 2px;
+	text-align: center;
+}
+/*글쓰기 글 정보 박스 */
+.WritingInfoBox{
+	width: 100%;
+	height: 6%;
+	margin: 5px auto;
+	//border: solid 1px red;
+}
+/*날짜 박스 */
+.DateInput{
+	width:50%;
+	height: 95%;
+	border: solid 2px #E458E8;
+}/*만료기간 글씨*/
+.DateOver{
+	font-size: 19px;
+	margin: 4px 8px;
+	margin-top: 7px;
+	vertical-align: middle;
+}/*만료기간ㅇ 박스 */
+.DateInputBox{
+	width: 32%;
+	height: 50%;
+	margin: 8px 20px;
+	//border: solid 1px #E458E8;
+	display: inline-block;
+	vertical-align: top;
+}/*가격 박스 */
+.WriteHowMuchBox{
+	width: 30%;
+	height: 55%;
+	margin: 15px;
+	margin-top: 8px;
+	//border: solid 1px #E458E8;
+	display: inline-block;
+	vertical-align: top;
+}
+/*가격 입력 박스 */
+.CostInput{
+	width: 50%;
+	height: 70%;
+	border: solid 2px #E458E8;
+	padding-left: 15px;
+}
+/*급구 박스 */
+.HurryUpBox{
+	width: 20%;
+	height: 55%;
+	margin: 15px;
+	margin-top: 8px;
+	//border: solid 1px red;
+	display: inline-block;
+	vertical-align: top;
+}/* 급구 체크 박스  */
+.HurryUpCheckBox{
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+	vertical-align: middle;
+	border: solid 2px red;
+	margin-left: 0px;
+	cursor: pointer;
+}/*해쉬태그 전체 박스 _글쓰기*/
+.WritingHashBox{
+	width: 99%;
+	height: 12%;
+	margin: 1px auto;
+	//border: solid 1px orange;
+}
+/*카테고리 선택 제목*/
+.HashSelect_write{
+	font-size: 18px;
+	width: 20%;
+	margin: 10px;
+	text-align: left;
+}/*해쉬태그들 박스 */
+.HashSelectBox_write{
+	width: 98%;
+	margin: 5px auto;
+	//border: solid 1px green;
+}
+/*사진 업로드 박스 */
+.WritingImgUpBox{
+	width: 99%;
+	height: 5%;
+	margin: 1px auto;
+	//border: solid 1px orange;
+}/*이미지 업로드 칸*/
+.ImgUpload_write{
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 3px;
+	border: solid 1px #E458E8;
+}
+#ImgUploadTxt{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 3px;
+}/*이미지 업로드 적용 버튼*/
+#ImgUploadButton_write{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 3px;
+	height: 80%;
+}
+/* 글쓰기 본문 박스 */
+.WritingContentPageBox{
+	width: 100%;
+	height: 65%;
+	margin: 0 auto;
+	border-top: solid 1px #E31488;
+}/*글쓰기 본문 텍스트에리어*/
+.WritingContent{
+	width: 98%;
+	height: 60%;
+	margin: 0 auto;
+	border: solid 1px red;
+	padding: 5px;
+}
+/*저장 버튼 */
+.WriteTextButton{
+	background: #F4C667;
+	opacity: 0.8;
+	width: 90px;
+	height: 30px;
+	margin: 4px 15px;
+	//margin-left: 0px;
+	//margin-right: 0px;
+	font-size: 14px;
+	color: #975A06;
+	//font-weight: 800;
+	border: solid 1px #DA620E;
+	border-radius: 2px;
+	cursor:pointer;
+	float: right;
+	vertical-align: bottom;
+	margin-bottom: 2px;
+}
+#Back2BoardButton{
+	width: 90px;
+	height: 30px;
+	margin: 4px 15px;
+	float: left;
+}
+
+/*글쓰기 하단 박스 */
+.WriteUnderBox{
+	width: 98%;
+	height: 25%;
+	margin: 0 auto;
+	border: solid 1px blue;
+	//display: inline-block;
+}
+.WriteImgHide{
+	border: 1px solid orange;
+	width: 70px;
+	height: 70px;
+	///display: inline-block;
+}
+#WriteImgOne{
+	width: 70px;
+	height: 70px;
+}
+#WriteImgTwo{
+	width: 70px;
+	height: 70px;
+}
+
+#WriteImgThree{
+	width: 70px;
+	height: 70px;
+}
+
+
+

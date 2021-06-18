@@ -1,0 +1,248 @@
+<!doctype html>
+{%extends "index.html" %}
+<html>
+<head>
+<title>ShowPost</title>
+{% block content %}
+
+</head>
+
+<body>
+<div style='display: none' id='PostNumber'>{{ post[0] }}</div>
+<div class='LoginBackground'>
+    <!--글 보여주기 -->
+	<div class='ShowPostOutBox'>
+			<h1 class='ShowPostTitle'>{{ post[3] }}</h1>
+			<div class='PostHeadBox'>
+				<span class='PostWritter'>이름 {{ post[2] }}</span>
+				<div class='PostShowUpload'>게시일 {{ post[9] }}</div>
+				<div class='PostDeadLine'>마감 {{ post[4] }}</div>
+				<div class='PostShowCount'>조회 {{ post[12] }}</div>
+			</div>
+			<div class='PostSellingBox'>
+				{% for one in post[7]  %}
+				<div class='DesignerSpecialHash' id='PostHash{{ one }}'>#{{ one }}</div>
+				{% endfor %}
+				<div class='PostCost'>가격 {{ post[5] }}</div>
+			</div>
+			<div class='PostCommentCount'>댓글 개수 {{ post[13] }}</div>
+			{% if post[1] == id %}
+			<button type='text' class='PostDeleteButton' name='PostDeleteButton'>삭제</button>
+			{% endif %}
+			<pre class='PostContentBox'>{{ post[8] }}</pre>
+			{% if post[10] != 'no_pic'%}
+			<div class='PostImgBox'>
+				{% for i in post[10] %}
+				<img class='ImgOne' id={{i.split('.')[0]}} src="/static/post_img/{{ i }} ">
+				{% endfor %}
+			{% endif %}
+			</div>
+
+	</div>
+	
+	<div class='img_big_box'  style='display: none' >
+		<button class='img_close' name='img_close' type='button'>X</button>
+		<div class='show_img_box' >
+		    
+			<button class='img_move' name='img_left'><</button>
+			<img class='img_show_one'>
+			<button class='img_move' name='img_right'>></button>
+		</div>
+		
+	</div>
+	
+	
+	<!--댓글 다는 곳-->
+	<div class='CommentBox'>
+	    <!--댓글 입력-->
+		<div class='CommentHeadBox'>
+		    
+			<div class="CommentStarButton">
+				<img class='CommentOneStarImg' id='CommentOneStarImg_input' src = "{{ url_for('static', filename='star_empty.png') }}" >
+			</div>
+					
+			<input type='text' class='CommentStarOnOff' name='CommentStarOnOff'
+						style='display: none' value='{{post[0]}}of'></input>
+			<div style='display: none' id='ReplyInfo'></div>
+						
+						
+			<input class="CommentInput"    autocomplete="off"
+					name='CommentInput' size='100' placeholder='댓글 달기' required ='' ></input>
+			<button type='button' class='SearchFilterButton' 
+			id="CommentInputButton" name='CommentInputButton' onclick='CommentInput()'>입력
+			</button>
+		</div>
+		<!--댓글 창-->
+		<div id='CommentOneBox'>
+		    
+			{% for comment in comment_list  %}
+			{% if comment[3] == 'yes' %}
+			<div class='CommentLine' id="CommentLine{{ comment[5] }}">
+			<div class='CommentBoard'>
+				{% if comment[2] == 'on' %}
+					<img class='CommentOneStarImg' src = "{{ url_for('static', filename='star.jpg') }}" >
+				{% else %}
+					<div class='CommentOneStar'></div>
+				{% endif %}
+				<img class='CommentProfileImg' src = "/static/profile_img/{{comment[8]}}" >
+				<div class='CommentTextBox'>
+					<div class='CommentHeadBox'>
+					<span class='CommentName'>{{ comment[0] }}</span>
+					
+					{% if post[1] == comment[6] %}
+					<div class='PostWriterCheck'>작성자</div>
+					{% endif %}
+					
+					<div class='CommentDate'>{{ comment[4] }}</div>
+					{% if comment[2] != 'de' %}
+					<button class='WannaCommentAgain' id='reply_input_{{ comment[5] }}' 
+					name='reply_input_{{ comment[5] }}'>답글 달기</button>
+					{% endif %}
+					
+					{% if comment[6] == comment[7] and comment[2] != 'de' %}
+					<div class='MyCommentBox'>
+						<span class='MyCommentFix'>수정</span>
+						<span class='MyCommentDel'>삭제</span>
+					</div>
+					{% endif %}
+					</div>
+					<div class='CommentText'>{{ comment[1] }}</div>
+				</div>
+				
+				<!--답글 입력-->
+				<div style="display: none" class='ReplyHideBox' id='ReplyComment{{ comment[5] }}'>
+					<input class='ReplyComment' id='Reply_Comment{{ comment[5] }}' placeholder='답글 작성'
+						type='text' >
+					<button type='button' class='ReplyButton' 
+					id="ReplyInputButton{{ comment[5] }}" name='ReplyInputButton' >입력
+					</button>
+				</div>
+				
+			</div>
+				<!--답글 보여주기-->
+				{% for one in comment_list  %}
+					{% if comment[5] == one[3] %}
+					<div class='CommentBoard'>
+					<div class='CommentReplyBox'>
+						<div class='CommentOneStar' id='ReplyArrow'>↳</div>
+						
+						<img class='CommentProfileImg' src = "/static/profile_img/{{one[8]}}" >
+						<div class='CommentTextBox' id="reply_{{ one[5] }}">
+						<div class='CommentHeadBox'>
+							<span class='CommentName'>{{ one[0] }}</span>
+							
+							{% if post[1] == one[6] %}
+							<div class='PostWriterCheck'>작성자</div>
+							{% endif %}
+							
+							<div class='CommentDate'>{{ one[4] }}</div>
+							{% if one[6] == one[7] %}
+							<div class='MyCommentBox'>
+								<span class='MyCommentFix'>수정</span>
+								<span class='MyCommentDel'>삭제</span>
+							</div>
+						
+							{% endif %}
+							</div>
+							<div class='CommentText'>{{ one[1] }}</div>
+						</div>
+					</div>
+					</div>
+					
+					{% endif %}
+				{% endfor %}
+			</div>
+			{% endif %}
+			
+			{% endfor %}
+			<div class='FixSave' style='display: none'></div>
+			
+		</div>
+		
+		
+	</div>
+	
+</div>
+
+<script>
+//답글 달기 누르면 답글 입력창 보여주기
+$(document).ready(function(){
+	console.log("hello page");
+	// 답글달기 창 하나만 띄우기
+	$(document).on('click', '.WannaCommentAgain', function(){
+		//버튼 누른 아이디
+		var tag = $(this).attr('id');
+		// 기존 저장 아이디값
+		var info = $('#ReplyInfo').attr( 'value');
+		var comment_num_new = tag.slice(12,);
+		
+		// 게시글 넘버
+		var PostNumber = $('#PostNumber').text();
+		// 최초 눌렀을 경우
+		if(info != null)
+			var comment_num_org = info.slice(12,);
+		else{
+		    info = '';
+			var comment_num_org = '';
+		}
+		// 누른 값이 다를 경우, 화면 보여줌
+		if(info != tag){
+		    console.log('www');
+			$('#ReplyComment'+comment_num_org).css( 'display', 'none' );
+			$('#ReplyComment'+comment_num_new).css( 'display', 'block' );
+			$('#ReplyInfo').attr( 'value', tag );
+		}
+		else{
+			$('#ReplyComment'+comment_num_org).css( 'display', 'none' );
+			$('#ReplyInfo').attr( 'value', '' );
+		}
+		
+	});
+	
+});
+//답글 입력 후 입력버튼
+$(document).ready(function(){
+    //답글 입력 버튼
+	$(document).on('click', '.ReplyButton', function(){
+		
+		var comment_num_new = $(this).attr('id').slice(16,);
+		var comment = $('#Reply_Comment'+comment_num_new).val();
+		var PostNumber = $('#PostNumber').text();
+		
+		//입력 값이 있을 경우, 답글 전송
+		if(comment != '')
+			reply_input(comment, PostNumber, comment_num_new);
+		else
+		    alert('뭐라도 입력하세요.');
+		});
+	// 답글 수정 완료 버튼
+	$(document).on('click', '.ReplyFixButton', function(){
+		
+		var CommentNumber = $(this).parent().children('input').attr('id').slice(12,);
+		var new_comment = $("#ReplyComment"+CommentNumber).val();
+		comment = CommentModify(new_comment, CommentNumber);
+		$(this).parent().css("display", "none");
+		$(this).parent().prev().text(comment);
+		$(this).parent().prev().css("display", "block");
+	});
+	// 수정 취소 버튼 눌렀을 경우
+	$(document).on('click', '.ReplyCancleButton', function(){
+		//var org_comment = $('.input_save').text();
+		var org_comment = $(this).parent().prev().text();
+		//console.log(org_comment);
+		
+		
+		$(this).parent().prev().css("display", "block");
+		$(this).parent().remove();
+		$('.FixSave').text('');
+	});
+
+});
+
+
+
+</script>
+
+{% endblock %}
+</body>
+</html>

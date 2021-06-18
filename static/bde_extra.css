@@ -1,0 +1,342 @@
+/* 2019 09 23 css 3th   */
+
+
+#MyProfileFixButton{
+	width: 95%;
+	height: 85%;
+	padding: 1px;
+	vertical-align: top;
+	margin-left: 7px;
+	margin-top: 5px;
+}
+/***********************************/
+          /*글 보여주기 화면*/
+/***********************************/
+/*게시글 박스*/
+.ShowPostOutBox{
+	width: 50%;
+	height: 670px;
+	margin: 15px auto;
+	border: 2px solid blue;
+}
+/*게시글  제목*/
+.ShowPostTitle{
+	width: 80%;
+	height: 9%;
+	margin: 0 auto;
+	text-align: center;
+}
+/*게시글 정보 박스 */
+.PostHeadBox{
+	width: 100%;
+	height: 6%;
+	margin: 5px auto;
+	text-align: center;
+	display: inline-block;
+	//border: 2px solid blue;
+}
+/*게시글 거래 정보 박스 */
+.PostSellingBox{
+	width: 100%;
+	height: 5%;
+	margin: 0 auto;
+	//border: 2px solid orange;
+	text-align: center;
+}
+/*게시글 작성자*/
+.PostWritter{
+	width: 20%;
+	display: inline-block;
+	//border: 1px solid red;
+}
+/*게시글 가격*/
+.PostCost{
+	width: 20%;
+	display: inline-block;
+	//border: 1px solid red;
+	margin: 0 20px;
+}
+/*게시글 마감일*/
+.PostDeadLine{
+	width: 20%;
+	display: inline-block;
+	//border: 1px solid red;
+}
+/*게시글 조회*/
+.PostShowCount{
+	width: 20%;
+	display: inline-block;
+	//border: 1px solid red;
+}
+/*게시글 게시일*/
+.PostShowUpload{
+	width: 20%;
+	display: inline-block;
+	//border: 1px solid red;
+}
+/*게시글 거래 해쉬태그 */
+.PostSellHash{
+	display: inline-block;
+}
+/*게시글 본문 박스 */
+.PostContentBox{
+	border: 1px solid green;
+	width: 90%;
+	height: 65%;
+	margin: 0 auto;
+}
+/*게시글 사진 보여주기 박스 */
+.PostImgBox{
+	border: 1px solid green;
+	width: 90%;
+	margin: 0 auto;
+}
+.ImgOne{
+	border: 1px solid red;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+}
+
+/*이미지 클릭하면 확대*/
+.img_big_box{
+	position: absolute;
+	bottom: 20px;
+	left: 450px;
+	width: 800px;
+	display: inline-block;
+}
+.show_img_box{
+	height: 620px;
+	line-height: 620px;
+}
+.img_show_one{
+	width: 600px;
+	height: 600px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.img_close{
+	float: right;
+	width: 50px;
+	height: 50px;
+}
+.img_move{
+	display: inline-block;
+	height: 200px;
+	width: 50px;
+}
+
+/**************************************/
+/***** 댓글 페이지 *********************/
+.CommentBox{
+	width: 50%;
+	//height: 300px;
+	margin: 0 auto;
+	//border: 1px solid orange;
+}
+.CommentHeadBox{
+	width: 95%;
+	height: 13%;
+	margin: 10px auto;
+	//border: 1px solid blue;
+	min-width: 478px;
+	//display: inline-block;
+}/*댓글 입력창*/
+.CommentInput{
+	width: 75%;
+	height: 35px;
+	//margin: 0 auto;
+	border: 1px solid red;
+	vertical-align: top;
+	padding-left: 15px;
+	display: inline-block;
+}/*별 on 벼튼*/
+.CommentStarButton{
+	width: 5%;
+	height: 88%;
+	display: inline-block;
+}
+/*댓글 입력 버튼 */
+#CommentInputButton{
+	width: 12%;
+	height: 35px;
+	margin: 0;
+	margin-left: 10px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+/*각각의 코멘트 박스 */
+.CommentLine{
+	width: 98%;
+	//height: 10%;
+	//margin-left: 20px;
+	margin-top: 5px;
+	//border: 1px solid red;
+	display: inilne-block;
+}/*댓글 이름*/
+.CommentName{
+	width: 13%;
+	height: 90%;
+	//border: 1px solid green;
+	display: inline-block;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 800;
+}/*댓글 별 이미지*/
+.CommentOneStar{
+	width: 38px;
+	height: 90%;
+	//border: 1px solid green;
+	display: inline-block;
+}/*댓글 내용*/
+.CommentText{
+	width: 70%;
+	height: 25px;
+	//border: 1px solid green;
+	//display: inline-block;
+	margin-left: 15px;
+	margin-top: 5px;
+	font-size: 18px;
+}/*댓글 날짜*/
+.CommentDate{
+	width: 13%;
+	//height: 90%;
+	//border: 1px solid green;
+	display: inline-block;
+	font-size: 14px;
+	text-align: center;
+	
+}/*답글달기 버튼*/
+.WannaCommentAgain{
+	width: 10%;
+	height: 25px;
+	//border: 1px solid green;
+	display:inline-block;
+	cursor: pointer;
+	background-color: rgba( 255, 255, 255, 0 );
+	border: 0;
+	padding: 0;
+	outline:none;
+}
+
+/*댓글 별*/
+.CommentOneStarImg{
+	width: 35px;
+	height: 35px;
+	margin: 2px;
+	vertical-align: top;
+	//border: 1px solid green;
+}
+
+
+/**  답글 달기 부분 ***/
+
+.ReplyComment{
+	width: 70%;
+	height: 35px;
+	//border: 1px solid black;
+	margin-left: 50px;
+}
+.ReplyHideBox{
+	margin-left: 70px;
+	min-width: 410px;
+}
+/*답글 버튼*/
+.ReplyButton{
+	width: 60px;
+	height: 40px;
+	vertical-align: top;
+	border: 0;
+	
+	-moz-box-shadow:inset 0px 0px 0px 0px #efdcfb;
+	box-shadow:inset 0px 0px 0px 0px #efdcfb;
+	background:linear-gradient(to bottom, #dcc2f2 5%, #cf8ed1 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dcc2f2', endColorstr='#cf8ed1',GradientType=0);
+	background-color:#dcc2f2;
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:white;
+	font-family:Arial;
+	//font-size:15px;
+	font-weight: 800;
+	text-decoration:none;
+	text-shadow: 2px 0px 2px #9752cc;
+	
+}
+/*각각의 답글 박스 */
+.CommentReplyBox{
+	width: 87%;
+	margin-left: 70px;
+	margin-top: 5px;
+	//border: 1px solid black;
+	display: inilne-block;
+	min-width: 674px;
+}
+
+/*댓그 프로필 사진*/
+.CommentProfileImg{
+	width: 50px;
+	height: 40px;
+	//border: 1px solid green;
+	display: inline-block;
+	vertical-align: top;
+	margin: 1px 3px;
+	border-radius: 50%;
+}
+.CommentTextBox{
+	width: 85%;
+	display: inline-block;
+	//min-width: 570px;
+	//border: 1px solid blue;
+}
+/*댓글 구분선*/
+.CommentBoard{
+	border-bottom: 1px solid #f2d2d3;
+	min-width: 709px;
+}
+/*댓글 화살표*/
+#ReplyArrow{
+	//border: 1px solid black;
+	vertical-align: top;
+	text-align: right;
+	font-size: 20px;
+}
+/*수정 삭제 박스*/
+.MyCommentBox{
+	//vertical-align: bottom;
+	display: inline-block;
+	font-size: 13px;
+}
+/*댓글 수정*/
+.MyCommentFix{
+	display: inline-block;
+	cursor: pointer;
+}
+/*댓글 삭제*/
+.MyCommentDel{
+	display: inline-block;
+	cursor: pointer;
+}
+/*댓글 작성자 표시*/
+.PostWriterCheck{
+	width: 10%;
+	//height: 90%;
+	border: 1px solid red;
+	display: inline-block;
+	font-size: 14px;
+	text-align: center;
+	margin: 0;
+	border-radius: 20px;
+}
+/*게시글 삭제 버튼*/
+.PostDeleteButton{
+	display: inline-block;
+	background-color: orange;
+}
+/*게시글 댓글 개수 */
+.PostCommentCount{
+	display: inline-block;
+}

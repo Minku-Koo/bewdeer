@@ -1,0 +1,58 @@
+<!doctype html>
+{%extends "index.html" %}
+<html>
+<head>
+<title>findpw</title>
+{% block content %}
+
+</head>
+
+<body>
+
+<div class='LoginBackground'>
+	<div class='LoginBigBox' id='FindPwPage' >
+			
+		<form name='FindPwNameForm' method='post' id="FindPwNameForm" action='/findpw_name' >
+			
+			<h2 class="LoginHeadText">비밀번호 찾기 </h2>
+			  <!-- 아이디 입력 -->
+			<div class="LoginInputOutBox">
+			<input class="LoginInput" id="idFindPwButton" type='text'  autocomplete="off"
+				name='idFindPwButton' size='20' placeholder='아이디' required ='' >
+			<br></div>
+			
+		   <!-- 이름 입력 -->
+			<div class="LoginInputOutBox" id="FindPwByNameBox">
+			<input class="LoginInput" id="namdFindPwButton" type='text' autocomplete="off"
+				name='namdFindPwButton' size='20' placeholder='이름' required ='' value=''>
+				<br></div>
+				
+			
+			<!-- 로그인/회원가입 버튼 -->
+			<button type='submit' class='LoginSubmitButton'> 
+			다 음 </button>
+		</form>
+		
+			
+		<a href='/LoginPage'>
+		<button type='button' class='LoginOthers' 
+		id="Back2LoginPage"> 
+		로그인 하러가기
+		</button></a> 
+		<br>
+		<br>
+
+		{% if cont == 100 :%}
+		<div class='PasswordResult' >
+			비밀번호는<span class='PasswordResultFinal'> {{pw}}</span>입니다
+		</div>
+		{% endif %}
+		
+		
+		
+	</div>
+</div>
+	
+{% endblock %}
+</body>
+</html>

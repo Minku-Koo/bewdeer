@@ -1,0 +1,86 @@
+<!doctype html>
+{%extends "index.html" %}
+<html>
+<head>
+<title>MyProfile</title>
+{% block content %}
+
+</head>
+
+<body>
+
+<div class='LoginBackground'>
+
+	hello {{id}}
+	
+	<div class='OneDesignerIntroducePage' >
+		<div class='DesignerProfileInfoBox'>
+			<div class='ProfileImgBox'>
+				<img class='DesignerProfileImg' src = "{{ url_for('static', filename='chaew.jpg') }}" >
+			</div>
+			
+			<div class='DesignerProfileHeadBox'>
+				<div class='ProfileHeader'>
+					<h2 class='DesignerProfileName'>차 은 우</h2>
+					<div class='ChatOrMyPageBox'>
+						<button class='SearchFilterButton' type='button' name='MyProfileFixButton' id='MyProfileFixButton'>
+						내 정보 수정
+						</button>
+					</div>
+				</div>
+				<div class='ProfileSchool'>
+					<div class='SchoolName'>청주대</div>
+					<div class='SchoolSlice'> / </div>
+					<div class='SchoolMajor'>산업 디자인</div><br>
+				</div>
+				<div class='DesignerProfileStar'> 
+					<span>★ 4.4<span>
+				</div>
+			</div>
+		</div>
+		<div class='ProfileMyIntroBox'>
+			<h3 class='MyIntroHeadText'>자 기 소 개</h3>
+				<span class='Quotation'>"<span>
+				<p class='MyIntroSaying'>
+					나는 세상에서 제일 잘생긴 차은우
+				</p>
+				<span class='Quotation'>"<span>
+		</div>
+		<div class='DealHistoryBox'>
+			<h3 class='MyIntroHeadText' id='DealHistoryHead'>거래 내역</h3>
+			<table class='DealHistoryTable'>
+				<tr>
+					<td width='8%'>1</td>
+					<td width='75%'>히드라군 아이디 팝니다</td>
+					<td width='17%'>★ 3.4</td>
+				</tr>
+			</table>
+			<div class='DealHistoryButtonBox'>
+				<button type='button' class=''> 이전 </button>
+				<button type='button' class=''> 다음 </button>
+			</div>
+		</div>
+		
+		<div class='PortfolioBox'>
+			<h3 class='MyIntroHeadText' id='PortFolioHeadTxt'>포트폴리오</h3>
+			<div class='PortFolioImgBox'>
+				<img class='PortfolioImgOne' src = "{{ url_for('static', filename='130.jpg') }}" >
+				<img class='PortfolioImgOne' src = "{{ url_for('static', filename='143.jpg') }}" >
+				<img class='PortfolioImgOne' src = "{{ url_for('static', filename='177.jpg') }}" >
+			</div>
+		</div>
+		
+	</div>
+	
+	<a href='/logout'>
+	<button type='button' class='SearchFilterButton' name='LogoutButton' >
+	로그아웃
+	</button>
+	</a>
+	
+
+</div>
+
+{% endblock %}
+</body>
+</html>

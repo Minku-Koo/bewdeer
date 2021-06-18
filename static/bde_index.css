@@ -1,0 +1,311 @@
+/* beaudeer project CSS file  */
+/*그라데이션 색 3개*/
+/* fa81fb  9d86f1  ee7f7f  */
+
+/* menu bar outside div box */
+.MenuOutBox{
+	height: 20%;
+}
+/* menu bar inside div box */
+.MenuInBox{
+	width: 85%;  /* 가로 비율--중요!! -bottom*/
+	height: 100px;
+	margin: 0 auto;
+	min-width: 1020px;
+	/* min width가 화면 고정의 비결 */
+	padding-bottom: 25px;
+	border-bottom: 2px solid #ECB2EF;
+	vertical-align:top;
+	//position: relative;
+}
+
+/* 홈 버튼 */
+.HomePic{
+	width: 200px;
+	height: 100px;
+	//border: 1px solid blue;
+	display: inline-block;
+	margin: 0;
+	
+	//float: left;
+	//padding: 20px;
+	margin-top: 40px;
+}
+.HomePic a{
+	background: linear-gradient(to right, #fa81fb , #9d86f1 , #ee7f7f );
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 55px;
+	font-family: 'NanumBarunGothic', sans-serif;
+	//vertical-align: bottom;
+	//margin-top: 40px;
+}
+/*메뉴 버튼 div 박스*/
+.MenuButtonBox{
+	//position: relative;
+    display: inline-block;
+    float: right;
+	height: 100px;
+	width: 700px;
+	//border: 1px solid green;
+	margin-top: 20px;
+}
+
+.MenuSelect{   /* 메뉴바 중앙정렬 */
+	margin: 0px auto;
+	width: 80%;
+	margin-top: 40px;
+	float: right;
+	//border: 1px solid red;
+}
+/* 메뉴 버튼 공통 class */
+.MenuButton{
+	display: inline-block;
+	font-size: 25px;
+	margin: 0px 20px;
+	text-decoration: none;
+	color: black;
+	font-family: 'NanumBarunGothic', sans-serif;
+	vertical-align: top;
+}
+
+
+
+.bbox{
+	width: 30px;
+	height: 30px;
+	border: solid 1px orange;
+	display: inline-block;
+	//vertical-align: top;
+}
+
+.LoginDoor{
+	width: 28px;
+	height: 28px;
+	vertical-align: middle;
+	//margin-bottom: 10px;
+	display: inline-block;
+	float: left;
+}
+
+
+.a, .b{
+	display: inline-block;
+	margin: 0px;
+	vertical-align: top;
+	float: left;
+	//border: solid 1px blue;
+	//border-left: solid 0px;
+	width: 13px;
+	height: 100%;
+	z-index: 0;
+}
+
+.aa {
+	margin: 0px;
+	width: 100%;
+	height: 11px;
+	//border-bottom: solid 1px #fa81fb;
+	
+}
+.ab{
+	margin: 0px;
+	width: 100%;
+	height: 11px;
+	border-top: solid 1px #fa81fb;
+	
+}
+.ba {
+	margin: 0px;
+	width: 100%;
+	height: 11px;
+	position: relative;
+	border-top: solid 1px #ee7f7f;
+	border-right: solid 1px #ee7f7f;
+}
+.bb{
+	margin: 0px;
+	width: 100%;
+	height: 11px;
+	position: relative;
+	border-bottom: solid 1px #ee7f7f;
+	border-right: solid 1px #ee7f7f;
+}
+
+
+
+.cb{
+	margin: 0px;
+	width: 0px;
+	position: absolute;
+	top:0;
+	height: 0px;
+	border-top: solid 1px red;
+	border-left:10px solid #ee7f7f;
+	border-bottom:10px solid transparent; 
+	z-index: 1;
+}
+.ca{
+	margin: 0px;
+	width:0px;
+	height:0px;
+	position: absolute;
+	bottom:0;
+	border-right:10px solid transparent;
+	border-bottom:10px solid #ee7f7f; 
+	z-index: 1;
+}
+
+
+
+/* 메인 화면 로그인 버튼 */
+#LoginButton span{
+	//color: #B40431;
+	background: linear-gradient(to right, #fa81fb , #9d86f1 , #ee7f7f );
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: 'NanumBarunGothic', sans-serif;
+	
+	float: left;
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+/*메인 화면 이미지 박스*/
+.MainImage{
+	width: 85%;    /* 메뉴 바와 비율 맞추기 */
+	margin: 0 auto;
+	//border: solid 2px red;
+	//height: 660px;
+}
+/*메인 화면 이미지*/
+.MainPic{
+	width: 100%;
+	//height: 100%;
+	vertical-align:top;
+}
+
+.MenuButtonBox li a:link{ /* 처음 링크 상태 */
+	text-decoration: none;
+	color: black;
+}
+.MenuButtonBox li a:hover{  /* 마우스 오버 시 상태 */ 
+	text-decoration: none;
+	color: black;
+}
+.MenuButtonBox li a:visited{ /* 방문 했던 링크 상태 */ 
+	text-decoration: none;
+	color: black;
+}
+#loggbtn{
+	margin-right: 0px;
+}
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@   로 그 인   페 이 지    @@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.LoginBackground{  /*로그인 전체 배경*/
+	width: 100%;
+	height: 100%;
+}
+
+.LoginBigBox{  /*  로그인 입력 박스  */
+	margin: 0 auto;
+	position: relative;
+	width: 30%;
+	text-align: center;
+	width: 350px;
+	
+}
+
+.LoginHeadText{  /*로그인 제목*/
+	font-size: 33pt;
+}
+
+/* 로그인 정보 입력 박스 큰 틀*/
+.LoginInputOutBox{
+	//position: relative;
+	background: #ECE0F8;
+	border: solid 2px #E2A9F3;
+	//opacity: 0.7; /*상속 방지 위해 opacity  대신 아랫것 사용*/
+	background: rgba(#E2A9F3, 0.7);
+	width: 320px;
+	height: 45px;
+	margin: 7px;
+	border-radius: 25px;
+		
+}
+
+/* 아이디 비밀번호 박스 작은 틀*/
+	
+.LoginInput{
+	background-color: #ECE0F8;
+	border: 0px;
+	width: 270px;
+	height: 25px;
+	margin-top: 10px;
+	padding-left: 10px;
+	//margin-left: 4px;
+	outline:none;
+	/*outline = input 박스 클릭 시 테두리 없애기*/
+}
+
+/*  로그인 & 회원가입 버튼  */
+.LoginSubmitButton{
+	background: #D0A9F5;
+	opacity: 0.9;
+	width: 310px;
+	height: 60px;
+	margin: 10px 2px;
+	margin-right: 12px;
+	font-size: 20px;
+	color: #380B61;
+	font-weight: 850;
+	border: solid 2px #8A0886;
+	border-radius: 8px;
+	cursor:pointer;
+}
+
+/* 회원 가입// 비밀번호 찾기 버튼 */
+.LoginOthers{
+	background: #F8E0F7;
+	opacity: 0.7;
+	width: 130px;
+	height: 33px;
+	margin: 6px 16px;
+	font-size: 14px;
+	color: ##A901DB;
+	font-weight: 800;
+	border: solid 1px #8A0886;
+	border-radius: 3px;
+	cursor:pointer;
+	text-decoration: none;
+}
+.LoginOthers a:link{ /* 처음 링크 상태 */
+	text-decoration: none;
+	color: black;
+}
+.LoginOthers a:hover{  /* 마우스 오버 시 상태 */ 
+	text-decoration: none;
+	color: black;
+}
+.LoginOthers a:visited{ /* 방문 했던 링크 상태 */ 
+	text-decoration: none;
+	color: black;
+}
+
+#SignUpButton{ margin-left: 0px; }
+#FindPwButton { margin-right: 5px; }
+
+/**이름으로 찾기, 이메일로 찾기 상세 설정***/
+#PwFindByName, #PwFindByEmail{
+	margin: 20px 2px;
+}
+
+.PasswordResult{
+	font-size: 18px;
+}
+.PasswordResultFinal{
+	color: red;
+}

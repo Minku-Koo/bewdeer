@@ -1,0 +1,81 @@
+<!-- 2019 09 11 Beaudeer Project Start. made by Koo Minku  -->
+<!doctype html>
+<html>
+<head>
+<title>Welcome, Beaudeer</title>
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{ url_for('static', filename='bde_index.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bde_designer.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='bde_extra.css') }}">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+
+<script type="text/javascript"
+src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<!--src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">-->
+</script>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body>
+
+	<header class='MenuOutBox'>
+		<div class='MenuInBox'>
+			<h1 class='HomePic'>
+				<a href="/" >
+					뷰디어
+				</a>
+			</h1>
+			
+			<nav role='navigation' class='MenuButtonBox'>
+				<ul class="MenuSelect">
+					<li class='MenuButton'><a href="/designer">디자이너</a></li>
+					<li class='MenuButton'><a href="/board/%&2$%1$@7&1C45^8E85">게시판</a></li>
+					<!---<li class='MenuButton'><a href="/board/now/1">게시판</a></li>-->
+					<li class='MenuButton'><a href="">고객센터</a></li>
+					{% if id == "" :%}
+					<li class='MenuButton' id='loggbtn'>
+					<a href="/LoginPage" id='LoginButton'>
+						<span class='Logintext'>로그인</span>
+					<!---<div class='bbox'>-->
+						<img class='LoginDoor' src = "{{ url_for('static', filename='LoginDoor.png') }}" >
+					
+					</a>
+					</li>
+					
+					{% else %}
+					<li class='MenuButton' id='MyProfileButton'>
+					<a href="/myprofile" id='ToMyProfilePage'>
+					<span>MY</span>
+					</a>
+					</li>
+					{% endif %}
+				</ul>
+			</nav>
+				
+			
+			
+		</div>
+	</header>
+{% block content %}
+
+	<div>
+		<div class='MainImage'>
+			<img class='MainPic' src = "{{ url_for('static', filename='main_pic.png') }}" >
+		</div>
+	</div>
+
+
+{% endblock %}
+
+
+<script 
+src="{{ url_for('static', filename='beaudeer.js') }}"> </script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js">
+</script>
+
+</body>
+ 
+</html>
