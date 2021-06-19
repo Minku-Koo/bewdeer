@@ -628,12 +628,15 @@ $('.SearchByWhatButton').change(function(){
 $('.DesignerSpecialHash').click(function(){
 	//$(this).css('background-color', '#FF4000');
 	var hash_id =  $(this).text();
+	console.log("3210");
 	console.log(hash_id);
+	console.log("321");
 	var hash_set = $('.category_set').text();
 	// 처음 클릭일 경우
 	if(hash_set.indexOf(hash_id) == -1){
 		$('.category_set').text(hash_set + hash_id);
 		$(this).css('background-color', '#FF4000');
+		console.log("first click");
 	}
 	else{ // 이미 클릭한 경우
 		hash_set = hash_set.replace(hash_id, '');
