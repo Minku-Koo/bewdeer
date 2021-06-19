@@ -1,6 +1,12 @@
 # 2019 09 11 Beaudeer Project Start. made by Koo Minku
-# IP Address :  203.252.231.52
-# Linux Address : 203.252.237.149
+
+'''
+
+파이썬 처음 배우던 시절...
+허접한 실력으로 구현해본 Flask WAS 입니다.
+초보자가 구현한 코드임을 미리 알려드립니다.
+- 21.06.20.
+'''
 
 from flask import Flask, redirect, url_for, request, render_template
 import pymysql
@@ -10,32 +16,6 @@ from flask import session,  jsonify
 from werkzeug import secure_filename
 import operator
 #from flask_socketio import SocketIO, send, emit
-
-app = Flask(__name__)
-app.secret_key = 'S0sA1lykaanWa11_sL^eK$n-450w'
-
-#이미지 첨부 시, 이미지 파일 형식인지 검사 함수
-def ImgFileCheck(img_list):
-    img_extensions = ['ai', 'jpg', 'jpeg',  'raw', 'png', 'psd', ]
-    
-    if img_list == '?':
-        return 100
-    
-    list = img_list.split('?').remove('')
-    #list.remove('')
-    for name in list:
-        chk = 0
-        extension = name.split('.')[-1]
-        
-        for e in img_extensions:
-            if e == extension.lower():
-                chk = 1
-                break
-                
-        if chk != 1:
-            return 0
-        
-    return 100
 
 """
 user 정보 database table
@@ -77,10 +57,37 @@ create table comment<post_no>(
     date datetime,
     primary key(no));
 """
+
+app = Flask(__name__)
+app.secret_key = 'S0sA1lykaanWa11_sL^eK$n-450w'
+
+#이미지 첨부 시, 이미지 파일 형식인지 검사 함수
+def ImgFileCheck(img_list):
+    img_extensions = ['ai', 'jpg', 'jpeg',  'raw', 'png', 'psd', ]
+    print("img list", img_list)
+    if img_list == '?':
+        return 100
+    
+    images = img_list.split('?')
+    images.remove('')
+    print("images:", images)
+    for name in images:
+        chk = 0
+        extension = name.split('.')[-1]
+        
+        for e in img_extensions:
+            if e == extension.lower():
+                chk = 1
+                break
+                
+        if chk != 1:
+            return 0
+        
+    return 100
+
 # 로그인 되어있으면 아이디 정보를 할당
 def LogOnOff():
-    if 'id' in session:
-        return session.get('id')
+    if 'id' in session: return session.get('id')
     return ''
 
 # 마감날짜 계산 함수
@@ -97,8 +104,7 @@ def CountDeadline(now, dead):
     day = date(dead_y, dead_m,dead_d) - date(now_y,now_m,now_d)
     day = str(day).split(' ')[0]
     
-    if day == "0:00:00" or int(day) < 0:
-        day = 'over'
+    if day == "0:00:00" or int(day) < 0: day = 'over'
     
     return day
     
@@ -619,8 +625,9 @@ def ShowComment(PostNo):
             
         # comment_number
         #포르필이미지 추가
-        cursor.execute("SELECT profile_img FROM user WHERE id_value='%s'" %one[1] )
-        list.extend([one[0], one[1], LogOnOff(), cursor.fetchone()[0]])
+        # cursor.execute("SELECT profile_img FROM user WHERE id_value='%s'" %one[1] )
+        # list.extend([one[0], one[1], LogOnOff(), cursor.fetchone()[0]])
+        list.extend([one[0], one[1], LogOnOff()])
         comment_list.append(list)
         
     cursor.close()
@@ -776,33 +783,25 @@ def idCheck(id):
 def NameCheck(name):
     chk = re.compile('[^a-zA-Z가-힣 ]')
     
-    if len(name) <1 or len(name) > 20:
-        return 0
+    if len(name) <1 or len(name) > 20: return 0
     # 공백 이외의 특수문자가 존재할 경우
-    elif chk.search(name) != None:
-        return 202
+    elif chk.search(name) != None: return 202
     else:
         # name 중복
-        if exist_table('user', 'name', name) == 1:
-            return 303
+        if exist_table('user', 'name', name) == 1: return 303
         # name 성공
-        else:
-            return 100
+        else: return 100
 
 # password 검사
 # 8~20자의 영문 소문자, 숫자와 특수문자 가능
 def PasswordCheck(pw, pwc):
     # 비밀번호 확인이 일치하지 않을 경우
-    if pw != pwc:
-        return 44
+    if pw != pwc: return 44
     # 8~20 범위 밖의 비밀번호 입력
-    elif len(pw)<8 or len(pw)>20:
-        return 0
+    elif len(pw)<8 or len(pw)>20: return 0
     # 비밀번호에 공백이 존재할 경우 
-    elif ' ' in pw:
-        return 101
-    else: 
-        return 100
+    elif ' ' in pw: return 101
+    else:  return 100
     
 # 이메일 검사 
 # 이메일 형식 갖추고있는지, . 다음이 올바른 url 형식인지, 공백은 없는지 
@@ -857,13 +856,11 @@ def SingUP_DB(id, name, pw, email):
 ### 로그인 세션 - 세션에 아이디 정보 저장
 def LogInSuccess(id):
     session['id'] = id
-    print('session in')
     return True
 
 # log out
 @app.route('/logout')
 def LogOut():
-    print('seesion out!!')
     session.pop('id', None)
     return render_template('LoginPage.html', id='')
 
@@ -916,7 +913,7 @@ def WriteOnBoard():
                 i.save("./static/post_img/" + file_save_name)
         else:
             f_name = secure_filename(f_list[0].filename)
-            f_name.save("./static/post_img/" + img_date+'_'+id+'_'+f_name[-5:])
+            f_list[0].save("./static/post_img/" + img_date+'_'+id+'_'+f_name[-5:])
             img_list = img_date+'_'+id+'_'+f_name[-5:]+'?'
             
         print(img_list)
@@ -1022,9 +1019,7 @@ def FindPassword(id, other, what):
     cursor.close()
     db.close()
     
-    if pw ==  pwc:
-        print(pw)
-        return pw
+    if pw ==  pwc: return pw
     
 
 # 댓글 답글 삭제
@@ -1094,7 +1089,6 @@ def post_delete():
         db.close()
         print('post delete complete')
         return json.dumps('')
-        
         
         
 if __name__ == '__main__':
