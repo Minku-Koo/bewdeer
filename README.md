@@ -1,12 +1,12 @@
 # bewdeer
 ## Design trading platform for University student
 
-### 📢 Notice ❗
+## 📢 Notice ❗
 Python을 처음 배우던 시절...     
 Flask를 처음 배우고 시작한 프로젝트이기에 코드가 매우 매우 더럽습니다.    
 
 
-***
+## 💡 Introduction
 
 📌 Name : 뷰디어 / Bewdeer
 
